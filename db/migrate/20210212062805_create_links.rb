@@ -1,11 +1,14 @@
 class CreateLinks < ActiveRecord::Migration[6.1]
   def change
     create_table :links do |t|
-      t.string :url
-      t.text :name
-      t.string :shortened_url
-
+      t.text :title, null: true
+      t.text :description, null: true
+      t.text :url, null: false
+      t.integer :counter, default: 0
       t.timestamps
+      
     end
+
+    add_index :links, :url
   end
 end
