@@ -1,19 +1,19 @@
 
-<p>
+<li>
   <strong>Title:</strong>
   <%= @link.title %>
-</p>
+</li>
 
-<p>
+<li>
   <strong>Description:</strong>
   <%= @link.description %>
-</p>
+</li>
 
-<p>
+<li>
   <strong>Url:</strong>
   <%= @link.url %>
-</p>
+</li>
 
-<%= link_to 'Edit', edit_link_path(@link) %> |
-<%= link_to 'Back', links_path %>
+<%= link_to 'Edit', edit_link_path(@link), class: 'btn'  %> |
+<%= link_to 'Back', links_path,  class: 'btn'  %>
   
