@@ -64,6 +64,6 @@ class LinksController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def link_params
-      params.require(:link).permit(:url, :name, :shortened_url)
+      params.require(:link).permit(:title, :description, :url)
     end
 end
